@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>qAI37 — AI at scale, on a fraction of the power</title>
+<meta name="description" content="AI's demand for power is outgrowing the grid 13 to 1. qAI37 uses quantum-native infrastructure to deliver AI at scale on a fraction of the power.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="progress" aria-hidden="true"></div>
+<div id="cursor-glow" aria-hidden="true"></div>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="field" aria-hidden="true"></div>
+<div class="grid-overlay" aria-hidden="true"></div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#" aria-label="qAI37 home">qAI<b>37</b><span class="dot"></span></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#problem">Problem</a>
+      <a href="#approach">Approach</a>
+      <a href="#team">Team</a>
+      <a class="btn" href="#join">Get updates</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Quantum-native AI infrastructure</span>
+        <h1>AI's hunger for power is growing <span class="x13">13×</span> faster than the grid can feed it.</h1>
+        <p class="lede"><strong>qAI37 breaks that curve.</strong> A hybrid quantum architecture that runs AI at scale on a fraction of the power — without touching the software stack you already run.</p>
+        <form class="capture" id="hero-form" novalidate>
+          <input type="email" id="hero-email" placeholder="you@company.com" aria-label="Email address" required>
+          <button class="btn" type="submit">Get launch updates</button>
+        </form>
+        <div class="confirm" id="hero-confirm" role="status">
+          <span aria-hidden="true">✓</span> You're on the list. We'll be in touch before we go public.
+        </div>
+        <p class="capture-note">No spam — occasional founding updates, then a heads-up at launch.</p>
+      </div>
+
+      <!-- SIGNATURE: the divergence -->
+      <div class="chart-card" aria-hidden="false">
+        <div class="chart-head">
+          <span class="chart-title">Compute energy demand vs. supply</span>
+          <span class="chart-src">SRC · Decadal Plan for Semiconductors</span>
+        </div>
+        <svg class="chart" viewBox="0 0 600 380" role="img" aria-label="Two curves diverging: AI compute energy demand rising 26 percent per year, energy supply rising 2 percent per year, opening a widening gap.">
+          <!-- gridlines -->
+          <g stroke="rgba(255,255,255,.06)" stroke-width="1">
+            <line x1="40" y1="60" x2="580" y2="60"/>
+            <line x1="40" y1="140" x2="580" y2="140"/>
+            <line x1="40" y1="220" x2="580" y2="220"/>
+            <line x1="40" y1="300" x2="580" y2="300"/>
+          </g>
+          <!-- axes -->
+          <line x1="40" y1="40" x2="40" y2="320" stroke="rgba(255,255,255,.2)" stroke-width="1"/>
+          <line x1="40" y1="320" x2="580" y2="320" stroke="rgba(255,255,255,.2)" stroke-width="1"/>
+          <text class="axis-label" x="40" y="350">2024</text>
+          <text class="axis-label" x="540" y="350">2034 →</text>
+          <text class="axis-label" x="14" y="56" transform="rotate(-90 14 56)">Power</text>
+
+          <!-- gap fill -->
+          <path id="gapfill" d="M40,300 C260,296 420,250 580,60 L580,288 C420,300 260,303 40,304 Z" fill="url(#gapgrad)"/>
+          <defs>
+            <linearGradient id="gapgrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="rgba(248,169,60,.28)"/>
+              <stop offset="100%" stop-color="rgba(248,169,60,.02)"/>
+            </linearGradient>
+          </defs>
+
+          <!-- supply (cyan, ~2%/yr) -->
+          <path class="curve supply" d="M40,304 C200,300 400,294 580,288"/>
+          <!-- demand (amber, ~26%/yr) -->
+          <path class="curve demand" d="M40,300 C260,296 420,250 580,60"/>
+
+          <!-- labels -->
+          <g class="reveal-late">
+            <text class="tag amber" x="470" y="48">+26% / yr · demand</text>
+            <text class="tag cyan" x="455" y="305">+2% / yr · supply</text>
+            <text class="gap-tag" x="430" y="180">THE GAP</text>
+            <circle cx="580" cy="60" r="4" fill="var(--amber)"/>
+            <circle cx="580" cy="288" r="4" fill="var(--cyan)"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section id="problem">
+    <div class="wrap">
+      <div class="forces-head reveal">
+        <span class="sec-eyebrow">The collision</span>
+        <h2>Three forces are hitting the same wall at once.</h2>
+        <p class="sec-lede">Scale, silicon, and infrastructure used to advance together. They no longer do — and the gap above is where they break.</p>
+      </div>
+      <div class="forces">
+        <div class="force reveal">
+          <span class="k">FORCE 01 — Scale</span>
+          <h3>An insatiable demand for compute</h3>
+          <p>Every breakthrough wants more processing, more memory, more storage. The promise of AI is built on a relentless pursuit of "more."</p>
+        </div>
+        <div class="force reveal">
+          <span class="k">FORCE 02 — Silicon</span>
+          <h3>The end of free efficiency</h3>
+          <p>Moore's Law no longer delivers the power savings it once did. Progress has shifted to brute force: more cores, more chips, more racks.</p>
+        </div>
+        <div class="force reveal">
+          <span class="k">FORCE 03 — Grid</span>
+          <h3>The infrastructure breaking point</h3>
+          <p>That brute force outruns data-center power and the electrical grid itself — turning scale into an unsustainable capital and energy bill.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPROACH -->
+  <section class="sol" id="approach">
+    <div class="wrap sol-grid">
+      <div class="reveal">
+        <span class="sec-eyebrow">Our approach</span>
+        <h2>A quantum answer that fits the world you already built.</h2>
+        <p class="sec-lede">qAI37 brings together AI, quantum computing, and data-center infrastructure into one hybrid architecture — engineered to bend the cost and power curve, not your codebase.</p>
+        <div class="pillars">
+          <div class="pillar">
+            <span class="mark"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span>
+            <div><h3>Low power</h3><p>Order-of-magnitude efficiency, so scale no longer means overwhelming the grid.</p></div>
+          </div>
+          <div class="pillar">
+            <span class="mark"><svg viewBox="0 0 24 24"><path d="M4 18V8M10 18V4M16 18v-7M22 18H2"/></svg></span>
+            <div><h3>Massively scalable</h3><p>Hardware and software that grow with AI's demand instead of buckling under it.</p></div>
+          </div>
+          <div class="pillar">
+            <span class="mark"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>
+            <div><h3>No software disruption</h3><p>Drops into today's ecosystem — disrupt the economics of AI, not the stack teams already run.</p></div>
+          </div>
+        </div>
+      </div>
+      <aside class="sol-note reveal">
+        <p class="q">We're building the foundation for the <b>next generations of AI</b> — sustainably, and at a scale today's infrastructure can't reach.</p>
+        <p class="meta">Stealth · founded 2025</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-band" id="join">
+    <div class="wrap">
+      <span class="sec-eyebrow">Be first</span>
+      <h2 class="reveal">See it before the rest of the market does.</h2>
+      <p class="sec-lede reveal">Join the list for founding updates and early access when we're ready to talk.</p>
+      <form class="capture" id="cta-form" novalidate>
+        <input type="email" id="cta-email" placeholder="you@company.com" aria-label="Email address" required>
+        <button class="btn" type="submit">Get launch updates</button>
+      </form>
+      <div class="confirm" id="cta-confirm" role="status">
+        <span aria-hidden="true">✓</span> You're on the list.
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span class="logo">qAI<b>37</b></span>
+    <span class="mono">© 2025 qAI37 — All rights reserved</span>
+    <span><a href="#problem">Problem</a> · <a href="#approach">Approach</a> · <a href="#team">Team</a></span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
